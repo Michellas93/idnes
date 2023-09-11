@@ -1,0 +1,213 @@
+/* ============
+Generic styles
+================ */
+* {
+	font-family: "Inter", sans-serif;
+}
+html {
+	font-size: 68.75%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1 {
+	font-size: 2.6rem;
+	color: #263238;
+	font-weight: 800;
+	line-height: 3rem;
+	letter-spacing: 0;
+	margin: 0 0 1.1rem 0;
+}
+p {
+	font-size: 1.4rem;
+	margin: 0;
+	line-height: 1.8rem;
+	color: #102447;
+}
+a {
+	text-decoration: none;
+}
+
+/* ============
+ Container, Wrap
+================ */
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+.main__container {
+	padding: 2.4rem 2.8rem 2.4rem 4rem;
+	margin: 0 auto;
+	width: 93.2rem;
+	display: flex;
+	background-image: url("/img/bg_umrti.jpg");
+}
+.main__article {
+	width: 36.2rem;
+}
+.main__image--wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	height: 13.6rem;
+	position: relative;
+	bottom: 13.8rem;
+	background: linear-gradient(180deg, rgba(16, 36, 71, 0) 0%, #102447 100%);
+}
+.main__article--paragraphs {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 12.4rem;
+}
+.main__archive {
+	width: 32.8rem;
+	display: flex;
+	flex-direction: column;
+}
+.main__archive--title {
+	display: flex;
+	margin: 0.5rem 0 1rem 0;
+}
+.main__archive--body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	height: 100%;
+	overflow: hidden;
+}
+.main__archive--paragraphs {
+	position: absolute;
+	top: 0;
+}
+.main__archive--shadow {
+	height: 3rem;
+	z-index: 1;
+	background: linear-gradient(
+		to top,
+		rgba(240, 242, 248, 100) 20%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+/* ============
+Paragraphs
+================ */
+.main__article p {
+	display: flex;
+	height: 3.6rem;
+	font-weight: 600;
+	line-height: 1.8rem;
+	letter-spacing: 0;
+	margin: 0;
+}
+.main__article p::before {
+	content: url("../img/chevron.svg");
+}
+.main__image--title {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1.7rem;
+	color: #ffffff;
+	font-weight: 600;
+	margin: 0;
+}
+.main__image--title::before {
+	content: url("/img/icon_gallery.svg");
+	display: inline-block;
+	width: 1.3rem;
+	color: #ffffff;
+	margin-right: 0.5rem;
+}
+.main__image--p {
+	font-size: 1.2rem;
+	font-weight: 400;
+	background: none;
+	color: #ffffff;
+	width: 13.2rem;
+	font-weight: 400;
+	font-size: 1rem;
+	border: 1px solid white;
+	border-radius: 0.257rem;
+	line-height: 1.886rem;
+	text-align: center;
+	margin: 0.5rem 0;
+}
+.main__archive--title p {
+	font-weight: 800;
+}
+.main__archive--p {
+	font-weight: 400;
+	margin-top: 0.1rem;
+	margin-bottom: 0.7rem;
+}
+
+/* ============
+Image
+================ */
+.main__image {
+	margin: 0 4.8rem;
+	height: 19.6rem;
+}
+img {
+	height: inherit;
+}
+
+/* ============
+Span, Circle
+================ */
+.main__circle {
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	background-color: #e41f1f;
+	margin-right: 0.7rem;
+	margin-top: 0.2rem;
+}
+.span--number {
+	font-weight: 800;
+	margin: 0.4rem;
+}
+.span--time {
+	background-color: rgb(209, 219, 239);
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	padding: 0.2rem;
+	font-weight: 600;
+}
+
+/* ============
+Link
+================ */
+.main__image a {
+	display: block;
+	height: inherit;
+}
+.main__image a:hover {
+	.main__image--title {
+		text-decoration: underline;
+	}
+}
+.archive__link {
+	border: 1px solid #cfdcf1;
+	background-color: #ffffff;
+	color: #102447;
+	font-size: 1.4rem;
+	font-weight: 600;
+	padding: 0.8rem 0.9rem 0.8rem 20rem;
+	display: flex;
+	align-items: center;
+}
+.archive__link::after {
+	margin-left: 0.9rem;
+	content: url("../img/icon_read-more.svg");
+	height: 1.4rem;
+}
+.archive__link:hover {
+	text-decoration: underline;
+}
